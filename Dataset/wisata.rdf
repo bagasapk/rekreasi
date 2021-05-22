@@ -3,7 +3,7 @@
 
 <rdf:RDF
 xmlns:rdf="http://www.w3.org/2000/01/rdf-schema#"
-xmlns:md="http://www.rekreasi.yuk/mangadata#"
+xmlns:md="http://www.rekreasi.yuk/wisatadata#"
 xmlns:d="http://www.rekreasi.yuk/data#">
 
 <rdf:Description
@@ -103,6 +103,7 @@ rdf:about="http://www.rekreasi.yuk/11">
           <md:types>Wisata Pertanian<md:types>
           <md:prices>475.000<md:prices>
           <md:coordinates>Unknown<md:coordinates>
+</rdf:Description>
 
 <rdf:Description
 rdf:about="http://www.rekreasi.yuk/0">

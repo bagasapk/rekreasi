@@ -1,0 +1,117 @@
+
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:md="http://www.rekreasi.yuk/wisatadata#"
+xmlns:d="http://www.rekreasi.yuk/data#">
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/1">
+  d:2     <md:titles>Candi Borobudur<md:titles>
+          <md:provinces>Jawa Tengah<md:provinces>
+          <md:types>Wisata Budaya<md:types>
+          <md:prices>50.000<md:prices>
+          <md:coordinates>7.608°S 110.204°E<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/2">
+  d:4     <md:titles>Tanah Lot<md:titles>
+          <md:provinces>Bali<md:provinces>
+          <md:types>Wisata Budaya<md:types>
+          <md:prices>20.000<md:prices>
+          <md:coordinates>8.621066°S 115.087025°E<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/3">
+  d:3     <md:titles>Kepulauan Wakatobi<md:titles>
+          <md:provinces>Sulawesi Tenggara<md:provinces>
+          <md:types>Wisata Maritim<md:types>
+          <md:prices>160.000<md:prices>
+          <md:coordinates>5.54°S 123.76°E<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/4">
+  d:1     <md:titles>Green Canyon<md:titles>
+          <md:provinces>Jawa Barat<md:provinces>
+          <md:types>Wisata Cagar Alam<md:types>
+          <md:prices>235.000<md:prices>
+          <md:coordinates>7°44′07″S 108°27′23″E <md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/5">
+  d:0     <md:titles>Agrowisata Kebun Teh Rancabali<md:titles>
+          <md:provinces>Jawa Barat<md:provinces>
+          <md:types>Wisata Pertanian<md:types>
+          <md:prices>Free<md:prices>
+          <md:coordinates>Unknown<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/6">
+  d:5     <md:titles>Kota Kuno Banten<md:titles>
+          <md:provinces>Banten<md:provinces>
+          <md:types>Wisata Ziarah<md:types>
+          <md:prices>Free<md:prices>
+          <md:coordinates>Unknown<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/7">
+  d:7     <md:titles>Candi Prambanan<md:titles>
+          <md:provinces>DI Yogyakarta<md:provinces>
+          <md:types>Wisata Budaya<md:types>
+          <md:prices>50.000<md:prices>
+          <md:coordinates>7.752020°S 110.491465°E<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/8">
+  d:6     <md:titles>Pantai Pink<md:titles>
+          <md:provinces>Nusa Tenggara Timur<md:provinces>
+          <md:types>Wisata Maritim<md:types>
+          <md:prices>10.000<md:prices>
+          <md:coordinates>Unknown<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/9">
+  d:10    <md:titles>Gunung Ijen<md:titles>
+          <md:provinces>Jawa Timur<md:provinces>
+          <md:types>Wisata Cagar Alam<md:types>
+          <md:prices>7.500<md:prices>
+          <md:coordinates>8.058°S 114.242°E<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/10">
+  d:9     <md:titles>Bali International Convention Centre<md:titles>
+          <md:provinces>Bali<md:provinces>
+          <md:types>Wisata Konvensi<md:types>
+          <md:prices>Unknown<md:prices>
+          <md:coordinates>Unknown<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/11">
+  d:8     <md:titles>Kusuma Agrowisata<md:titles>
+          <md:provinces>Jawa Timur<md:provinces>
+          <md:types>Wisata Pertanian<md:types>
+          <md:prices>475.000<md:prices>
+          <md:coordinates>Unknown<md:coordinates>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.rekreasi.yuk/0">
+  d:11    <md:titles>Masjid Agung Demak<md:titles>
+          <md:provinces>Jawa Tengah<md:provinces>
+          <md:types>Wisata Ziarah<md:types>
+          <md:prices>Free<md:prices>
+          <md:coordinates>6.894695°S 110.637602°E<md:coordinates>
+</rdf:Description>
+
+</rdf:RDF> 

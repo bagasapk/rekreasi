@@ -1,74 +1,74 @@
-  @prefix d:     <http://www.rekreasi.yuk/data#> .
-  @prefix md:    <http://www.rekreasi.yuk/wisatadata#> .
+  @prefix d:     <http://www.rekreasi.fake/data#> .
+  @prefix md:    <http://www.rekreasi.fake/wisatadatad#> .
 
   d:2     md:titles    "Candi Borobudur" ;
           md:provinces   "Jawa Tengah" ;
           md:types     "Wisata Budaya" ;
           md:prices  "50.000" ;
-          md:coordinates     "7.608°S 110.204°E" ; .
+          md:coordinates     "7.608°S 110.204°E" .
 
   d:4     md:titles     "Tanah Lot" ;
           md:provinces   "Bali" ;
           md:types     "Wisata Budaya" ;
           md:prices  "20.000" ;
-          md:coordinates     "8.621066°S 115.087025°E" ; .
+          md:coordinates     "8.621066°S 115.087025°E" .
 
   d:3     md:titles    "Kepulauan Wakatobi" ;
           md:provinces   "Sulawesi Tenggara" ;
           md:types     "Wisata Maritim" ;
           md:prices  "160.000" ;
-          md:coordinates     "5.54°S 123.76°E" ; .
+          md:coordinates     "5.54°S 123.76°E" .
 
   d:1     md:titles    "Green Canyon" ;
           md:provinces   "Jawa Barat" ;
           md:types     "Wisata Pertanian" ;
           md:prices  "Free" ;
-          md:coordinates     "Unknown" ; .
+          md:coordinates     "Unknown" .
 
   d:0     md:titles    "Agrowisata Kebun Teh Rancabali" ;
           md:provinces   "Jawa Barat" ;
           md:types     "Wisata Pertanian" ;
           md:prices  "Free" ;
-          md:coordinates     "Unknown" ; .
+          md:coordinates     "Unknown" .
 
   d:5     md:titles    "Kota Kuno Banten" ;
           md:provinces   "Jawa Barat" ;
           md:types     "Wisata Ziarah" ;
           md:prices  "Free" ;
-          md:coordinates     "Unknown" ; .
+          md:coordinates     "Unknown" .
 
   d:7     md:titles    "Candi Prambanan" ;
           md:provinces   "DI Yogyakarta" ;
           md:types     "Wisata Budaya" ;
           md:prices  "50.000" ;
-          md:coordinates     "7.752020°S 110.491465°E" ; .
+          md:coordinates     "7.752020°S 110.491465°E" .
 
   d:6     md:titles    "Pantai Pink" ;
           md:provinces   "Nusa Tenggara Timur" ;
           md:types     "Wisata Maritim" ;
           md:prices  "10.000" ;
-          md:coordinates     "Unknown" ; .
+          md:coordinates     "Unknown" .
 
   d:10    md:titles     "Gunung Ijen" ;
           md:provinces   "Jawa Timur" ;
           md:types     "Wisata Cagar Alam" ;
           md:prices  "7.500" ;
-          md:coordinates     "8.058°S 114.242°E" ; .
+          md:coordinates     "8.058°S 114.242°E" .
 
   d:9     md:titles    "Bali International Convention Centre" ;
           md:provinces   "Bali" ;
           md:types     "Wisata Konvensi" ;
           md:prices  "Unknown" ;
-          md:coordinates     "Unknown" ; .
+          md:coordinates     "Unknown" .
 
   d:8     md:titles    "Kusuma Agrowisata" ;
           md:provinces   "Jawa Timur" ;
           md:types     "Wisata Pertanian" ;
           md:prices  "475.000" ;
-          md:coordinates     "Unknown" ; .
+          md:coordinates     "Unknown" .
 
   d:11    md:titles    "Masjid Agung Demak" ;
           md:provinces   "Jawa Tengah" ;
           md:types     "Wisata Ziarah" ;
           md:prices  "Free" ;
-          md:coordinates     "6.894695°S 110.637602°E" ; .
+          md:coordinates     "6.894695°S 110.637602°E" .

@@ -1,17 +1,157 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
 
-.testGit{
-  
-}
+  .ul-navbar {
+    vertical-align: middle;
+    text-decoration: none;
+    list-style: none;
+    /* float:left; */
+    /* padding: 0 5px; */
+    height: 90px;
+  }
+  .li-navbar {
+    margin-right: 20px;
+    font-size: 20px;
+    float: right;
+    height: auto;
+    overflow: none;
+    display: inline-block;
+    justify-content: space-around;
+  }
+
+  .li-navbar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    padding: 7px 13px;
+    /* border-radius: 3px; */
+  }
+
+  li a:hover {
+    background-color: gray;
+    /* transition:.0s; */
+  }
+  .checkbutton {
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #checkbox {
+    display: none;
+  }
+
+  @media (max-width: 952px) {
+    .li-navbar a {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px) {
+    .checkbutton {
+      display: block;
+    }
+    .ul-navbar {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: #011325;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+    }
+    .li-navbar {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    .li-navbar a {
+      color: white;
+      font-size: 15px;
+    }
+    li a:hover {
+      background: none;
+      color: #0082e6;
+    }
+    #checkbox:checked ~ .ul-navbar {
+      left: 0;
+    }
+  }
+
+  header {
+    background-color: transparent;
+    height: 80px;
+    width: 100%;
+  }
+  .logo-img {
+    display: inline-block;
+    position: absolute;
+    width: 110px;
+    vertical-align: middle;
+    border-style: none;
+  }
+  .brandLogo {
+    margin-left: 20px;
+    float: left;
+    white-space: nowrap;
+    font-size: 15px;
+    height: auto;
+    overflow: none;
+    display: inline-block;
+    justify-content: space-around;
+  }
+
+  .slider{
+    position: relative;
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+  .travelImg{
+    top: 0%;
+    max-width: 1000px;
+    max-height: fit-content;
+    /* width: 1000px;
+    height: 600px; */
+    border-radius: 5px;
+  }
+  .right-arrow{
+    position: absolute;
+    top:40%;
+    right: 30px;
+    font-size: 5rem;
+    color: #000000;
+    font-weight: 500;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  .left-arrow{
+    position: absolute;
+    top:40%;
+    left: 30px;
+    font-size: 5rem;
+    color: #000000;
+    font-weight: 500;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  img{
+    width: -webkit-fill-available;
+  }

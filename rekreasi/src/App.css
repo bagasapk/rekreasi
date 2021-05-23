@@ -1,3 +1,7 @@
+html{
+background: url('https://i.ibb.co/RYR1c6C/DCIM-102-MEDIA-DJI-1380-JPG.jpg');
+}
+
 .App {
   text-align: center;
 }
@@ -116,7 +120,7 @@ button:hover span:after {
 
 ol{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -130,6 +134,7 @@ ol{
   height: 220px;
   margin-bottom: 10%;
   background: #E3E6AF;
+  text-align: center;
 }
 
 .listBox{
@@ -140,8 +145,13 @@ ol{
 .titleInformation{
   text-transform: uppercase;
   font-size: 40px;
-  font-family: cursive;
+  font-family: fantasy;
   margin-top: 1%;
+}
+
+.titleBox{
+  width: -webkit-fill-available;
+  text-align: center;
 }
 
 .gridBox{
@@ -150,11 +160,3 @@ ol{
   /* width: 0px; */
 }
 
-.imgBox{
-  /* width: 200px; */
-}
-
-.images{
-  max-height: 1000px;
-  min-height: 1000px;
-}

@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import query from "qs";
 import "./App.css";
+import CarouselData from "./components/CarouselData";
+import CarouselImg from "./components/CarouselImg";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [value, setValue] = useState({
@@ -166,7 +169,11 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="">
+      <div className="App">
+        <Navbar />
+        <CarouselImg slides={CarouselData} />
+      </div>
       <div className="searchBarDisplay">
         <div className="searchBar">
           <input
@@ -192,14 +199,13 @@ function App() {
           <span>Lihat Semua</span>
         </button>
       </div>
-      <span className="titleInformation">
-        <br />
-        Informasi
-      </span>
-      <div className="gridBox">
-        {/* <div className="imgBox"> */}
-          {/* <img className="images" alt="visitIndonesia" src="https://i.ibb.co/RYR1c6C/DCIM-102-MEDIA-DJI-1380-JPG.jpg"></img> */}
-        {/* </div> */}
+      <div className="titleBox">
+        <span className="titleInformation">
+          <br />
+          Informasi
+        </span>
+      </div>
+      {/* <div className="gridBox"> */}
         <div className="information">
           <ol>
             {value.items.map((item, i) => (
@@ -207,12 +213,11 @@ function App() {
                 <div className="itemBox">
                   <div className="">
                     <h2>{item.titles}</h2>
-                    <br />
                   </div>
-                  <div className="">
+                  <h3 className="">
                     {item.provinces}
                     <br />
-                  </div>
+                  </h3>
                   Tipe Wisata : {item.types}
                   <br />
                   HTM : {item.prices}
@@ -224,8 +229,8 @@ function App() {
             ))}
           </ol>
         </div>
-      </div>
-    </div>
+      </div>  
+    // </div>
   );
 }
 

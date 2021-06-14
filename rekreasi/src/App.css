@@ -160,3 +160,10 @@ ol{
   /* width: 0px; */
 }
 
+.titleBoxSuggest{
+  display: flex;
+  justify-content: space-around;
+  width: -webkit-fill-available;
+  text-align: center;
+}
+

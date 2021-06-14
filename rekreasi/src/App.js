@@ -6,9 +6,10 @@ import CarouselData from "./components/CarouselData";
 import CarouselImg from "./components/CarouselImg";
 import Navbar from "./components/Navbar";
 
-function App() {
+function App(props) {
   const [value, setValue] = useState({
     items: [],
+    suggest: [],
     input: "",
   });
 
@@ -160,10 +161,9 @@ function App() {
       console.log(data);
 
       // Convert Data
-      const formatted_data = data.results.bindings.map((items, index) =>
-        formatter(items, index)
+      const formatted_data = data.results.bindings.map((items) =>
+        formatter(items)
       );
-      console.log(formatted_data);
 
       setValue({
         ...value,
@@ -174,14 +174,63 @@ function App() {
     }
   };
 
-  const formatter = (items, index) => {
+  const getSuggestion = async (item) => {
+    const queryDataSuggest = {
+      query: `PREFIX md: <http://www.rekreasi.fake/wisatadatad#>
+    
+          SELECT ?titles ?provinces ?types ?prices ?coordinates
+          WHERE
+          {
+            ?m     md:titles ?titles ;
+          md:provinces ?provinces ;
+          md:types ?types ;
+          md:prices  ?prices ;
+          md:coordinates ?coordinates ;
+            FILTER regex(?provinces, "${item.provinces}") 
+          }`,
+    };
+
+    try {
+      const { data } = await axios(BASE_URL, {
+        method: "POST",
+        headers,
+        data: query.stringify(queryDataSuggest),
+      });
+      console.log(data);
+
+      // Convert Data
+      const formatted_data2 = data.results.bindings.map((suggest, index) =>
+        formatterSuggest(suggest, index)
+      );
+      console.log(formatted_data2);
+
+      setValue({
+        ...value,
+        suggest: formatted_data2,
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const formatter = (items) => {
     return {
-      d: index,
       titles: items.titles.value,
       provinces: items.provinces.value,
       types: items.types.value,
       prices: items.prices.value,
       coordinates: items.coordinates.value,
+    };
+  };
+
+  const formatterSuggest = (suggest, index) => {
+    return {
+      d: index,
+      titles: suggest.titles.value,
+      provinces: suggest.provinces.value,
+      types: suggest.types.value,
+      prices: suggest.prices.value,
+      coordinates: suggest.coordinates.value,
     };
   };
 
@@ -241,24 +290,56 @@ function App() {
       <div className="information">
         <ol>
           {value.items.map((item, i) => (
-            <li key={i} className="listBox">
-              <div className="itemBox">
-                <div className="">
-                  <h2>{item.titles}</h2>
-                </div>
-                <h3 className="">
-                  {item.provinces}
+            <div>
+              <li key={i} className="listBox">
+                <div className="itemBox">
+                  <div className="">
+                    <h2>{item.titles}</h2>
+                  </div>
+                  <h3 className="">
+                    {item.provinces}
+                    <br />
+                  </h3>
+                  Tipe Wisata : {item.types}
                   <br />
-                </h3>
-                Tipe Wisata : {item.types}
-                <br />
-                HTM : {item.prices}
-                <br />
-                Koordinat : {item.coordinates}
-                <br />
-              </div>
-            </li>
+                  HTM : {item.prices}
+                  <br />
+                  Koordinat : {item.coordinates}
+                  <br />
+                </div>
+              </li>
+              <button
+                className="getAll"
+                onClick={function (event) {
+                  getSuggestion(item);
+                }}
+              >
+                Dapatkan Saran
+              </button>
+            </div>
           ))}
+          <div className="titleBoxSuggest">
+            <h1 className="titleInformation">Saran Untukmu</h1>
+            {value.suggest.map((suggest, i) => (
+              <li key={i} className="listBox">
+                <div className="itemBox">
+                  <div className="">
+                    <h2>{suggest.titles}</h2>
+                  </div>
+                  <h3 className="">
+                    {suggest.provinces}
+                    <br />
+                  </h3>
+                  Tipe Wisata : {suggest.types}
+                  <br />
+                  HTM : {suggest.prices}
+                  <br />
+                  Koordinat : {suggest.coordinates}
+                  <br />
+                </div>
+              </li>
+            ))}
+          </div>
         </ol>
       </div>
     </div>

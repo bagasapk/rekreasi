@@ -12,14 +12,14 @@ function App() {
     input: "",
   });
 
+  const BASE_URL = "http://localhost:3030/wisata/query";
+
+  const headers = {
+    Accept: "application/sparql-results+json,*/*;q=0.9",
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+  };
+
   const getDataTitles = async () => {
-    const BASE_URL = "http://localhost:3030/wisata/query";
-
-    const headers = {
-      Accept: "application/sparql-results+json,*/*;q=0.9",
-      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    };
-
     const queryData = {
       query: `PREFIX md: <http://www.rekreasi.fake/wisatadatad#>
   
@@ -59,13 +59,6 @@ function App() {
   };
 
   const getDataProvinces = async () => {
-    const BASE_URL = "http://localhost:3030/wisata/query";
-
-    const headers = {
-      Accept: "application/sparql-results+json,*/*;q=0.9",
-      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    };
-
     const queryData = {
       query: `PREFIX md: <http://www.rekreasi.fake/wisatadatad#>
   
@@ -105,13 +98,6 @@ function App() {
   };
 
   const getDataTypes = async () => {
-    const BASE_URL = "http://localhost:3030/wisata/query";
-
-    const headers = {
-      Accept: "application/sparql-results+json,*/*;q=0.9",
-      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    };
-
     const queryData = {
       query: `PREFIX md: <http://www.rekreasi.fake/wisatadatad#>
   
@@ -151,13 +137,6 @@ function App() {
   };
 
   const getAll = async () => {
-    const BASE_URL = "http://localhost:3030/wisata/query";
-
-    const headers = {
-      Accept: "application/sparql-results+json,*/*;q=0.9",
-      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-    };
-
     const queryData = {
       query: `PREFIX md: <http://www.rekreasi.fake/wisatadatad#>
   
@@ -231,7 +210,10 @@ function App() {
           ></input>
         </div>
         <input
-          className="getData" placeholder="Find" required type="submit"
+          className="getData"
+          placeholder="Find"
+          required
+          type="submit"
           onClick={function (event) {
             getDataTitles();
             getDataProvinces();
@@ -240,7 +222,12 @@ function App() {
         >
           {/* <span>Find</span> */}
         </input>
-        <button className="getAll" onClick={function (event) {getAll();}}>
+        <button
+          className="getAll"
+          onClick={function (event) {
+            getAll();
+          }}
+        >
           <span>Lihat Semua</span>
         </button>
       </div>
@@ -251,30 +238,30 @@ function App() {
         </span>
       </div>
       {/* <div className="gridBox"> */}
-        <div className="information">
-          <ol>
-            {value.items.map((item, i) => (
-              <li key={i} className="listBox">
-                <div className="itemBox">
-                  <div className="">
-                    <h2>{item.titles}</h2>
-                  </div>
-                  <h3 className="">
-                    {item.provinces}
-                    <br />
-                  </h3>
-                  Tipe Wisata : {item.types}
-                  <br />
-                  HTM : {item.prices}
-                  <br />
-                  Koordinat : {item.coordinates}
-                  <br />
+      <div className="information">
+        <ol>
+          {value.items.map((item, i) => (
+            <li key={i} className="listBox">
+              <div className="itemBox">
+                <div className="">
+                  <h2>{item.titles}</h2>
                 </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </div>  
+                <h3 className="">
+                  {item.provinces}
+                  <br />
+                </h3>
+                Tipe Wisata : {item.types}
+                <br />
+                HTM : {item.prices}
+                <br />
+                Koordinat : {item.coordinates}
+                <br />
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
     // </div>
   );
 }

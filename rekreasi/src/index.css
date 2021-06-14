@@ -26,7 +26,7 @@
     float: right;
     height: auto;
     overflow: none;
-    display: inline-block;
+    /* display: inline-block; */
     justify-content: space-around;
   }
 
@@ -110,7 +110,7 @@
     font-size: 15px;
     height: auto;
     overflow: none;
-    display: inline-block;
+    /* display: inline-block; */
     justify-content: space-around;
   }
 

@@ -150,6 +150,51 @@ function App() {
     }
   };
 
+  const getAll = async () => {
+    const BASE_URL = "http://localhost:3030/wisata/query";
+
+    const headers = {
+      Accept: "application/sparql-results+json,*/*;q=0.9",
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+    };
+
+    const queryData = {
+      query: `PREFIX md: <http://www.rekreasi.fake/wisatadatad#>
+  
+        SELECT ?titles ?provinces ?types ?prices ?coordinates
+        WHERE
+        {
+          ?m     md:titles ?titles ;
+        md:provinces ?provinces ;
+        md:types ?types ;
+        md:prices  ?prices ;
+        md:coordinates ?coordinates ;
+        }`,
+    };
+
+    try {
+      const { data } = await axios(BASE_URL, {
+        method: "POST",
+        headers,
+        data: query.stringify(queryData),
+      });
+      console.log(data);
+
+      // Convert Data
+      const formatted_data = data.results.bindings.map((items, index) =>
+        formatter(items, index)
+      );
+      console.log(formatted_data);
+
+      setValue({
+        ...value,
+        items: formatted_data,
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   const formatter = (items, index) => {
     return {
       d: index,
@@ -182,20 +227,20 @@ function App() {
             type="text"
             className=""
             placeholder="Search Test"
-            required="required"
+            required
           ></input>
         </div>
-        <button
-          className="getData"
+        <input
+          className="getData" placeholder="Find" required type="submit"
           onClick={function (event) {
             getDataTitles();
             getDataProvinces();
             getDataTypes();
           }}
         >
-          <span>Find</span>
-        </button>
-        <button className="getAll" onClick={function (event) {}}>
+          {/* <span>Find</span> */}
+        </input>
+        <button className="getAll" onClick={function (event) {getAll();}}>
           <span>Lihat Semua</span>
         </button>
       </div>
